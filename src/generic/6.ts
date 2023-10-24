@@ -12,12 +12,12 @@ type User = {
   surname: string;
   email: string;
   password: string;
-}
-
-function createOrUpdateUser(initialValues: User) {
+};
+type UserBasicInfo = Pick<User, "email" | "password">;
+function createOrUpdateUser(initialValues: UserBasicInfo) {
   // Оновлення користувача
 }
 
-createOrUpdateUser({ email: 'user@mail.com', password: 'password123' });
+createOrUpdateUser({ email: "user@mail.com", password: "password123" });
 
 export {};
