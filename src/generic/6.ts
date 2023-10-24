@@ -13,7 +13,7 @@ type User = {
   email: string;
   password: string;
 };
-type UserBasicInfo = Pick<User, "email" | "password">;
+type UserBasicInfo = Partial<User>;
 function createOrUpdateUser(initialValues: UserBasicInfo) {
   // Оновлення користувача
 }
